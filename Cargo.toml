@@ -1,0 +1,13 @@
+[package]
+author = "Vampire club"
+description = "dma crate powered by https://github.com/Metick/DMALibrary"
+name = "dma"
+version = "1.0.0"
+license = "MIT"
+repository = "https://github.com/dondonavitch/dma-rust.git"
+edition = "2021"
+readme = "README.md"
+categories = ["cryptography", "memory-management"]
+
+[build-dependencies]
+cc = "1.0" 
