@@ -51,21 +51,21 @@ pub fn init(process_name: &str) -> bool {
     }
 }
 
-pub fn baseaddy(module_name: &str) -> u64 {
+pub fn base_addy(module_name: &str) -> u64 {
     let module_name_c = CString::new(module_name).unwrap();
     unsafe {
         c_get_base_address(module_name_c.as_ptr())
     }
 }
 
-pub fn basesize(module_name: &str) -> u64 {
+pub fn base_size(module_name: &str) -> u64 {
     let module_name_c = CString::new(module_name).unwrap();
     unsafe {
         c_get_base_size(module_name_c.as_ptr())
     }
 } 
 
-pub fn modlist(process_name: &str) -> Vec<String> {
+pub fn mod_list(process_name: &str) -> Vec<String> {
     let process_name_c = CString::new(process_name).unwrap();
     unsafe {
         let ptr = c_get_module_list(process_name_c.as_ptr());
